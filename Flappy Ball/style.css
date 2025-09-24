@@ -1,0 +1,100 @@
+/* Reset page */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #87ceeb, #e0f7fa);
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Game Canvas */
+#gameCanvas {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 600px;
+  aspect-ratio: 2/3;
+  border: 2px solid #333;
+  background: linear-gradient(to bottom, #87ceeb, #b2dfdb);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+/* Start Overlay */
+#startOverlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 2/3;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+}
+#startOverlay h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px #000;
+}
+#startButton {
+  padding: 15px 30px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  background: #ffcc00;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#startButton:hover {
+  background: #ffaa00;
+}
+
+/* Video Overlay (fullscreen) */
+#videoOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  z-index: 9999;
+}
+#gameOverVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Play Again Button */
+#playAgainContainer {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+#playAgainButton {
+  padding: 20px 40px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  background: #ff4444;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+#playAgainButton:hover {
+  background: #cc0000;
+}

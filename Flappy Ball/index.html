@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Lock scaling for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Flappy Ball</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+  <!-- Start Screen -->
+  <div id="startOverlay">
+    <div class="overlay-content">
+      <h1>Flappy Bird</h1>
+      <button id="startButton">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Video Overlay -->
+  <div id="videoOverlay">
+    <video id="gameOverVideo" autoplay playsinline>
+      <source src="https://github.com/sleepy-rayyy/Videos/raw/main/What%20if%20habang%20kausap.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Play Again Button -->
+  <div id="playAgainContainer">
+    <button id="playAgainButton">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
